@@ -1,7 +1,3 @@
-# final-project-codebusters2
-final-project-codebusters2 created by GitHub Classroom
-
-# Project task list 3
 
 ## Project description
 > This website is intended for people who want to discover beautiful landscapes, landmarks, sights and iconic places all over Canada, also we’re providing news and photos about different events that are happening in major cities such as Toronto, Vancouver etc. We are an interactive city-tour guide, providing information and photos in real-time about huge concerts, exhibitions or any local events that are set in the user's city.
