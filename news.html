@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>News - CitySpace</title>
+	<meta name="keywords" content="Canada, Toronto, events, news events">
+	<meta name="description" content="Find latest news about events in Canadian cities with us">
+	<link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/news.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Titillium Web' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <header>
+        <!-- website logo -->
+        <figure id="logo">
+            <a href="news.html"><img src="images/logo.png" alt="logo" width="150px" height="auto"></a>
+        </figure>
+
+        <!-- navigation bar -->
+        <nav class="topnav">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
+            <ul>
+                <li><a href="news.html"><div class="navEven  active"><p>News</p></div></a></li>     <!-- active link -->
+                <!-- nested menu -->
+                <li class="nestedMenu"><a href="#"><div><p>Content</p></div></a>
+                    <ul>
+                        <li><a href="gallery.html"><div class="navOdd"><p>Gallery</p></div></a></li>
+                        <li><a href="landmarks.html"><div class="navEven"><p>Landmarks</p></div></a></li>
+                        <li><a href="events.html"><div class="navOdd"><p>Events</p></div></a></li>
+                        <li><a href="placestogo.html"><div class="navEven"><p>Places to go</p></div></a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html"><div class="navOdd"><p>Contact</p></div></a></li>
+                <li><a href="about.html"><div class="navOdd"><p>About</p></div></a></li>
+            </ul> 
+
+            <ul class="login">
+                <li><a href="login.html"><div class="navOdd"><p>Login</p></div></a></li>
+                <li><a href="registration.html"><div class="navOdd"><p>Registration</p></div></a></li>
+            </ul> 
+        </nav>
+    </header>
+
+    <main>
+        <!-- different news articles -->
+        <h1>News & Articles</h1>
+        <article class="hvr-outline-out even"> 
+            <h2 class="title">Leslieville Farmers' Market</h2>
+            <h3 class="description">Oct 11, Jonathon Ashbridge Park</h3>
+            <img src="images/news/market.jpg" alt="market" width="350px" height="250px" class="short_images"> 
+            <p>A celebration of food every Sunday in the park! Leslieville Farmers' Market features farm-fresh groceries, diverse dishes to explore, live music, and children's activities</p>
+        </article>
+
+        <article class="hvr-outline-out odd">
+            <h2 class="title">Toronto's Big Business, Tech & Entrepreneur Professional Networking Soriee</h2> 
+            <h3 class="description">Oct 19, Midtown Gastro Hub</h3>
+            <img src="images/news/business.jpeg" alt="business" width="500px" height="250px" class="wide_images"> 
+            <p>Are you looking for co-founders, partners, coaches or core team members for your start-up? Please join us for an evening of creativity, inspiration and passionate conversations.</p>
+        </article>
+
+        <article class="hvr-outline-out even">
+            <h2 class="title">Passenger Concert</h2>
+            <h3 class="description">Nov 3, The Phoenix Concert Theatre</h3>
+            <img src="images/news/passenger.jpg" alt="Passenger" width="500px" height="250px" class="wide_images"> 
+            <p>Mike Rosenberg, known better as Passenger, is a British singer/songwriter quickly impacting the folk-rock scene with his earnest and introspective lyrics. Passenger was formerly a band fronted by Rosenberg that released a number of albums before the band members parted ways. Rosenberg continued with the name, and his latest release, All the Little Lights, is a folk-rock, indie-pop album filled with songs of loss, love, and hope. </p>
+        </article>
+
+        <article class="hvr-outline-out odd">
+            <h2 class="title">The Weeknd Concert</h2>
+            <h3 class="description">Nov 25, The Phoenix Concert Theatre in Toronto, Canada</h3>
+            <img src="images/news/theweeknd.jpg" alt="The Weeknd" width="450px" height="250px" class="medium_images"> 
+            <p>On tour, Tesfaye re-creates his recorded music with the help of some live backing musicians and usually can be counted on to bring an eye-popping light show. Fans consistently give Tesfaye kudos for the quality and depth of his live vocals. The Weeknd seems a natural onstage, even when the stages he's playing are huge. Hard to believe that his 2013 album, Kiss Land, was just his second.</p>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container-fluid"> 
+            <a class="website_name" href="#">CITY SPACE</a> 
+        </div>
+        <div class="copyright">
+            <span class="footer__copyright">© All Rights Reserved</span>
+            <span style="display: none">v0.0.1</span>
+        </div>
+    </footer>
+</body>
+</html>

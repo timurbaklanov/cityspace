@@ -1,0 +1,229 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+    background-color: rgb(238, 238, 238);
+    font-family: 'Oxygen', sans-serif;
+    z-index: -1;
+}
+.frame{
+    width: 95%;
+    height: 98%;
+    display: grid;
+    grid-template-rows: repeat(50, 2%);
+    grid-template-columns: repeat(50, 2%);
+}
+.frame img{
+    max-width: 100%;
+    height: auto;
+}
+.frame div{
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    text-align: center;
+    letter-spacing: 1px;
+}
+h1{
+    grid-area: 1 / 1 / 7 / 30;
+    margin: 2% 0;
+}
+h1 #headLastWord{
+    color: red;
+    display: inline;
+    border: none;
+}
+h2{
+    margin-bottom: 3%;
+}
+.img-1{
+    grid-area: 7 / 1 / 33 / 18;
+    background: url("../images/Events/Van_Gogh.jpg");
+}
+.img-2{
+    grid-area: 7 / 18 / 25 / 30;
+    background: url("../images/Events/creatures_book.jpg");
+    background-position-x: center;
+    background-position-y: 60%;
+    background-repeat: no-repeat;
+    font-size: 0.9em;
+}
+.img-3{
+    grid-area: 25 / 18 / 51 / 30;
+    background: url("../images/Events/mummy.jpg");
+    background-position-y: 10%;
+}
+.img-4{
+    grid-area: 33 / 1 / 51 / 18;
+    background: url("../images/Events/aga_khan.jpg"); 
+    background-position-x: 40%;
+    background-position-y: 60%;
+}
+.img-5{
+    grid-area: 7 / 40 / 23 / 51;
+    background: url("../images/Events/lim.jpg");
+    background-position-x: 20%;
+    background-position-y: 10%;
+}
+.img-6{
+    grid-area: 23 / 40 / 38 / 51;
+    background: url("../images/Events/trail.jpg");
+    background-position-x: 20%;
+    background-position-y: 85%;
+}
+.img-7{
+    grid-area: 38 / 40 / 51 / 51;
+    background: url("../images/Events/station.jpg");
+    background-position-x: 20%;
+    background-position-y: 65%;
+}
+.img-8{
+    grid-area: 7 / 30 / 51 / 40;
+    background: url("../images/Events/HIL.jpg");
+    background-repeat: no-repeat;
+    background-position-x: 20%;
+    background-position-y: 65%;
+}
+.eventLink{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-decoration: none;
+    color: white;
+}
+footer{
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+@media screen and (max-height: 820px) {
+    footer {
+        height: 6%;
+        padding-bottom: 0.3%;
+    }
+    .frame{
+        height: 95%;
+    }
+}
+@media screen and (max-width: 970px) {
+    main{
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        font-size: 0.8em;
+        height: 86.3%;
+    }
+    h1{
+        grid-area: 1 / 1 / 6 / 30;
+        margin: 2% 0;
+    }
+    .img-1{
+        grid-area: 6 / 1 / 31 / 18;
+    }
+    .img-4{
+        grid-area: 31 / 1 / 51 / 18; 
+    }
+    .img-2{
+        grid-area: 6 / 18 / 25 / 30;
+    }
+    .img-5{
+        grid-area: 6 / 40 / 23 / 51;
+    }
+    .img-8{
+        grid-area: 6 / 30 / 51 / 40;
+    }
+}
+@media screen and (max-width: 750px) {
+    main{
+        font-size: 0.65em;
+    }
+    h1{
+        grid-area: 1 / 1 / 4 / 35;
+    }
+    .img-1{
+        grid-area: 4 / 1 / 20 / 20;
+    }
+    .img-2{
+        grid-area: 4 / 20 / 20 / 35;
+    }
+    .img-3{
+        grid-area: 20 / 20 / 35 / 35;
+    }
+    .img-4{
+        grid-area: 20 / 1 / 35 / 20;
+    }
+    .img-5{
+        grid-area: 35 / 1 / 51 / 17;
+    }
+    .img-6{
+        grid-area: 35 / 17 / 51 / 34;
+    }
+    .img-7{
+        grid-area: 35 / 34 / 51 / 51;
+    }
+    .img-8{
+        grid-area: 4 / 35 / 35 / 51;
+    }
+}
+@media screen and (max-width: 480px) {
+    .img-1{
+        grid-area: 4 / 1 / 15 / 25;
+    }
+    .img-2{
+        grid-area: 4 / 25 / 15 / 51;
+    }
+    .img-3{
+        grid-area: 15 / 25 / 30 / 51;
+    }
+    .img-4{
+        grid-area: 15 / 1 / 30 / 25;
+    }
+    .img-5{
+        grid-area: 30 / 1 / 41 / 25;
+    }
+    .img-6{
+        grid-area: 30 / 25 / 41 / 51;
+    }
+    .img-7{
+        grid-area: 41 / 1 / 51 / 20;
+    }
+    .img-8{
+        grid-area: 41 / 20 / 51 / 51;
+    }
+}
+@media screen and (max-width: 390px) {
+    h1{
+        grid-area: 1 / 1 / 4 / 51;
+        font-size: 1.6em;
+    }
+    .img-1{
+        grid-area: 4 / 1 / 10 / 51;
+    }
+    .img-2{
+        grid-area: 10 / 1 / 16 / 51;
+    }
+    .img-3{
+        grid-area: 16 / 1 / 22 / 51;
+    }
+    .img-4{
+        grid-area: 22 / 1 / 28 / 51;
+    }
+    .img-5{
+        grid-area: 28 / 1 / 34 / 51;
+    }
+    .img-6{
+        grid-area: 34 / 1 / 40 / 51;
+    }
+    .img-7{
+        grid-area: 40 / 1 / 46 / 51;
+    }
+    .img-8{
+        grid-area: 46 / 1 / 51 / 51;
+    }
+}

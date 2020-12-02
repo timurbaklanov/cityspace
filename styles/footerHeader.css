@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html{
+  height: 100%;
+  width: 100%;
+}
+body{
+  height: 100%;
+  width: 100%;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  background-color: #edf2f4;
+}
+header{
+  box-sizing: border-box;
+  height: 8%;
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  border-bottom: 1px solid black;
+  background-color: white;
+}
+header #logo{
+  margin-left: 15px;
+  margin-top: 3px;
+}
+header .topnav{
+  height: 100%;
+  flex: 5; 
+}
+.topnav ul{
+  list-style-type: none;
+  display: flex;
+  align-items: stretch;
+  justify-content: left;
+  height: 100%;
+  width: 70%;
+}
+.topnav ul li{
+  flex: 1;
+}
+
+.topnav ul li ul li{
+  margin: 0;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 700;
+  font-family: "Titillium Web";
+  text-align: center;
+  padding: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.topnav a div{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 300;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  padding: 0 30px;
+  
+}
+.checkbtn {
+  display: none;
+}
+#check{
+  display: none;
+}
+.topnav a:hover{
+  background-color: rgb(230, 230, 230);
+}
+.topnav .active {
+  color: red;
+  background-color: rgb(230, 230, 230);
+}
+
+footer {
+  background-color: #282828;
+  color: white;
+  text-align: right;
+  padding: 8px 5px 0px 5px;
+  font-family: "Titillium Web";
+  height: 45px;
+}
+
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.website_name {
+  border: 1px solid #fff;
+  padding: 1px 4px 1px;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.copyright {
+  padding: 0.1%;
+  text-align: center;
+  font-size: 10px;
+  margin-top: 0.1%;
+}
+.topnav ul li ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  justify-content: stretch;
+  height: 300%;
+  width: 100%;
+  display: none;
+}
+.topnav ul li ul li a{
+  width: 100%;
+}
+.nestedMenu:hover > ul{
+  display: flex;
+}

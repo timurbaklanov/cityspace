@@ -1,0 +1,177 @@
+body {
+	font: 100% / 1.414 "Open Sans", "Roboto", arial, sans-serif;
+	background-image: url('../images/registration/Brisbane-City-Moody.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+a, [type="submit"] {
+	transition: all 0.25s ease-in;
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	left: 0;
+	margin-right: auto;
+	margin-left: auto;
+	transform: translateY(-50%);
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
+	height: 95%;
+	border-radius: 3px;
+	box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25);
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.76);
+}
+
+.container_child {
+	width: 50%;
+	height: 100%;
+	color: #fff;
+}
+
+.thumbnail {
+	position: relative;
+	padding: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.thumbnail_logo, .thumbnail_content, .thumbnail_links {
+	position: relative;
+	z-index: 2;
+}
+
+.thumbnail_logo {
+	align-self: flex-start;
+}
+
+.logo_shape {
+	fill: #fff;
+}
+
+.logo_text {
+	display: inline-block;
+	font-size: 0.8rem;
+	font-weight: 700;
+	vertical-align: bottom;
+	margin-top: 20px;
+}
+
+.thumbnail_content {
+	align-self: center;
+}
+
+h1, h2 {
+	font-weight: 300;
+	color: rgba(255, 255, 255, 1);
+}
+
+.heading-primary {
+	font-size: 1.999rem;
+}
+
+.heading-secondary {
+	font-size: 1.414rem;
+}
+
+.thumbnail_links {
+	align-self: flex-end;
+	width: 100%;
+}
+
+.thumbnail_links a {
+	font-size: 1rem;
+	color: #fff;
+}
+
+.thumbnail_links a:focus, .thumbnail_links a:hover {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.form {
+	padding: 2.5rem;
+	background: #fafafa;
+}
+
+label {
+	font-size: 0.85rem;
+	text-transform: uppercase;
+	color: #ccc;
+	display: block;
+}
+
+.form-control {
+	background-color: transparent;
+	border-top: 0;
+	border-right: 0;
+	border-left: 0;
+	border-radius: 0;
+	width: 100%;
+	font-size: 1rem;
+}
+
+.form-control:focus {
+	border-color: #111;
+}
+
+[type="text"] {
+	color: #111;
+}
+
+[type="password"] {
+	color: #111;
+}
+
+.btn-form {
+	padding: 0.5rem 2.5rem;
+	font-size: 0.95rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #fff;
+	background: #111;
+	border-radius: 35px;
+}
+
+.btn-form:focus, .btn-form:hover {
+	background: lighten(#111, 13%);
+}
+
+.signup_link {
+	font-size: 0.8rem;
+	font-weight: 600;
+	text-decoration: underline;
+	color: #999;
+}
+
+.signup_link:focus, .signup_link:hover {
+	color: darken(#999, 13%);
+}
+
+form {
+	position: absolute;
+	top: 20%;
+	width: 40%;
+}
+
+.form-group {
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.list-inline {
+	padding-left: 0px;
+	text-align: center;
+}

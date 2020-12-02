@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landmarks - CitySpace</title>
+    <meta name="keywords" content="Canada, Toronto, landmarks, places, sightseeing">
+    <meta name="description" content="Whether you’re a visitor or a local, learn more about our events
+    and landmarks and find inspiration for your next adventure through the city.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/landmarks.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Titillium Web' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <header>
+        <!-- website logo -->
+        <figure id="logo">
+            <a href="news.html"><img src="images/logo.png" alt="logo" width="150px" height="auto"></a>
+        </figure>
+
+        <!-- navigation bar -->
+        <nav class="topnav">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
+            <ul>
+                <li><a href="news.html"><div class="navEven"><p>News</p></div></a></li>
+                <!-- nested menu -->
+                <li class="nestedMenu"><a href="#"><div class="active"><p>Content</p></div></a>
+                    <ul>
+                        <li><a href="gallery.html"><div class="navOdd"><p>Gallery</p></div></a></li>
+                        <li><a href="landmarks.html"><div class="navEven active"><p>Landmarks</p></div></a></li>        <!-- active link -->
+                        <li><a href="events.html"><div class="navOdd"><p>Events</p></div></a></li>
+                        <li><a href="placestogo.html"><div class="navEven"><p>Places to go</p></div></a></li> 
+                    </ul>
+                </li>
+                <li><a href="contact.html"><div class="navOdd"><p>Contact</p></div></a></li>
+                <li><a href="about.html"><div class="navOdd"><p>About</p></div></a></li>
+            </ul>
+
+            <ul class="login">
+                <li><a href="login.html"><div class="navOdd"><p>Login</p></div></a></li>
+                <li><a href="registration.html"><div class="navOdd"><p>Registration</p></div></a></li>
+            </ul> 
+        </nav>
+    </header>
+        <section class="section presentation">
+            <h1 class="presentation-title">Travel around Canada with <span>CitySpace</span></h1>
+            <p class="presentation-text">Whether you’re a visitor or a local, learn more about our events
+                and landmarks and find inspiration for your next adventure through the city.</p>
+        </section>
+        <main>
+        <!--first section Popular Attractions-->
+        <div class="seperation-div">
+            <section class="section first-section">
+                <h2 class="title-section">Popular Attractions in <span>Toronto</span></h2>
+                <div class="photo-description">
+                    <img src="images/landmarks/casaloma.jpg" alt="Casa Loma" class="photo-section">
+                    <h4>Casa Loma</h4>
+                    <p class="description">Rarely has a name failed to capture the majesty of a place quite like Casa Loma,
+                        which means “Hill House” in Spanish. A more accurate title would’ve been “The ostentatious Gothic castle
+                    plonked in the middle of Toronto”.</p>
+                </div>
+                <div class="photo-description">
+                    <img src="images/landmarks/cntower.jpg" alt="Cn Tower" class="photo-section">
+                    <h4>CN Tower</h4>
+                    <p class="description">Leaving Toronto without scaling the city’s most iconic landmark would be like
+                        visiting Paris and not bothering to see the Eiffel Tower. Its name "CN" originally referred to Canadian
+                    National, the railway company that built the tower.</p>
+                </div>
+                <div class="photo-description">
+                    <img src="images/landmarks/distillerydistrict.jpg" alt="Distillery District" class="photo-section">
+                    <h4>Distillery District</h4>
+                    <p class="description">Once home to the largest whiskey producer in the British Empire, the cobbled
+                        alleyways of Toronto’s Distillery District provide a perfectly preserved time capsule of Victorian-era
+                    industrial architecture. </p>
+                </div>
+                <button class="btn">Click to find more</button>
+            </section>
+
+            <section class="section">
+                <h2 class="title-section">Check out our <span>Travel Guide</span></h2>
+                <iframe class="video" src="https://www.youtube.com/embed/7uY0Ab5HlZ0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+
+            <!--Second section Form section-->
+            <section class="email-section section">
+                <!--Title-->
+                <h2 class="title-section email-title"> Do you need more? <br>
+                    Feel free to ask us. We‘ll make list for you</h2>
+                    <img src="images/landmarks/torontosign.webp" alt="Toronto Sign" class="photo third-section-photo">
+
+                <form id="account-information" action="" method="GET">
+                    <!--Account Information Section-->
+                    <fieldset class="account-information">
+                        <legend>Please give us information about you: </legend>
+                        <div class="account-information">
+                            <label for="name">Name:</label>
+                            <input type="name" name="name" id="name" required>
+                            <div class="account-information">
+                                <label for="email">E-Mail:</label>
+                                <input type="email" name="email" id="email" required>
+                            </div>
+                        </div>
+                        <div class="comments">
+                            <label for="comments">Comments:</label>
+                            <textarea name="comments" id="comments"></textarea>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container-fluid"> 
+            <a class="website_name" href="#">CITY SPACE</a> 
+        </div>
+        <div class="copyright">
+            <span class="footer__copyright">© All Rights Reserved</span>
+            <span style="display: none">v0.0.1</span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact - CitySpace</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Canada, Toronto, events, news events, gallery, photos, pictures">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/gallery/CitySpace.ico">
+    <link href='https://fonts.googleapis.com/css?family=Titillium Web' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <header>
+        <!-- website logo -->
+        <figure id="logo">
+            <a href="news.html"><img src="images/logo.png" alt="logo" width="150px" height="auto"></a>
+        </figure>
+
+        <!-- navigation bar -->
+        <nav class="topnav">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
+            <ul>
+                <li><a href="news.html"><div class="navEven"><p>News</p></div></a></li>
+                <!-- nested menu -->
+                <li class="nestedMenu"><a href="#"><div><p>Content</p></div></a>
+                    <ul>
+                        <li><a href="gallery.html"><div class="navOdd"><p>Gallery</p></div></a></li>
+                        <li><a href="landmarks.html"><div class="navEven"><p>Landmarks</p></div></a></li>
+                        <li><a href="events.html"><div class="navOdd"><p>Events</p></div></a></li>
+                        <li><a href="placestogo.html"><div class="navEven"><p>Places to go</p></div></a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html"><div class="navOdd active"><p>Contact</p></div></a></li>         <!-- active link -->
+                <li><a href="about.html"><div class="navOdd"><p>About</p></div></a></li>
+            </ul>
+
+            <ul class="login">
+                <li><a href="login.html"><div class="navOdd"><p>Login</p></div></a></li>
+                <li><a href="registration.html"><div class="navOdd"><p>Registration</p></div></a></li>
+            </ul> 
+        </nav>
+    </header>
+
+    <main>
+        <div id="mainTitle">
+            <h1 id="address">Address</h1>
+            <h1 id="email">Email</h1>
+            <h1 id="phone">Phone</h1>
+        </div>
+        <div id="mainContent">
+            <p>Yorkdale Shopping Centre, 3401 Dufferin St, Toronto, ON M6A 2T9, Canada</p>
+            <p>citySpace@superMail.com</p>
+            <p>+1 234-567-8998<br>+1 754-765-2348</p>
+        </div>
+
+        <!-- google map api -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.283557784239!2d-79.45429568450957!3d43.725435955774664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b32340d1980a1%3A0x9948d80f620f1eb9!2sYorkdale%20Shopping%20Centre!5e0!3m2!1sen!2sua!4v1605518995967!5m2!1sen!2sua" 
+        width="90%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </main>
+
+    <footer>
+        <div class="container-fluid"> 
+            <a class="website_name" href="#">CITY SPACE</a> 
+        </div>
+        <div class="copyright">
+            <span class="footer__copyright">© All Rights Reserved</span>
+            <span style="display: none">v0.0.1</span>
+        </div>
+    </footer>
+</body>
+</html>

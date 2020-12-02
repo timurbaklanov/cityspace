@@ -1,0 +1,236 @@
+/*main element css*/
+.container {
+  height: 82%;
+  margin: 12px 0px 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.frame{
+  width: 98%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.frame div{
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 1s;
+  border-color: rgba(44, 44, 44, 0.603);
+  border-style: solid;
+  border-right-style: none;
+}
+
+/*right hand side border in last image*/
+.frame .img-9{
+  border-right-style: solid;
+}
+
+.frame div:hover{
+  flex: 3;
+  transition-duration: 1s;
+}
+
+.frame a{
+  flex: 1;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 1s;
+}
+
+.frame a:hover{
+  background-color: rgba(44, 44, 44, 0.603);
+  transition-duration: 1s;
+  opacity: 1;
+}
+
+.frame ion-icon{
+  opacity: 0;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  color: rgba(231, 231, 231, 0.4);
+  transition-duration: 1s;
+}
+
+.frame ion-icon:hover{
+  opacity: 1;
+  transition-duration: 1s;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+/*all images*/
+.frame .img-1{
+  background: url(../images/gallery/CasaLoma.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.frame .img-2{
+  background: url(../images/gallery/img2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position-x: 46%;
+  background-position-y: 35%;
+  background-size: cover;
+}
+
+.frame .img-3{
+  background: url(../images/gallery/City_Hall.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.frame .img-4{
+  background: url(../images/gallery/CN-tower.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.frame .img-5{
+  background: url(../images/gallery/coastal.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.frame .img-6{
+  background: url(../images/gallery/HighPark.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.frame .img-7{
+  background: url(../images/gallery/redHouse.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.frame .img-8{
+  background: url(../images/gallery/royal_museum.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.frame .img-9{
+  background: url(../images/gallery/Center2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*responsive*/
+@media screen and (max-width: 1196px) {
+    .frame div:hover{
+    flex: 2;
+    transition-duration: 1s;
+  }
+  .frame ion-icon:hover{
+    opacity: 1;
+    transition-duration: 1s;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media screen and (max-width: 970px){
+  .frame {
+    flex-flow: wrap;
+  }
+  body{
+    height: 200%;
+  }
+  .container{
+    height: 91%;
+  }
+  .frame{
+    height: 100%;
+  }
+  .frame div{
+    height: 33.3%;
+    min-width: 240px;
+    border-bottom-style: none;
+  }
+  .container .frame .img-3,  .container .frame .img-6,  .container .frame .img-9{
+    border-right-style: solid;
+  }
+  .container .frame .img-7,  .container .frame .img-8,  .container .frame .img-9{
+    border-bottom-style: solid;
+  }
+  .frame ion-icon{
+    opacity: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .frame ion-icon:hover{
+    opacity: 1;
+    transition-duration: 0.5s;
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+}
+@media screen and (max-width: 750px) {
+  body{
+    height: 220%;
+  }
+  .container{
+    height: 92%;
+  }
+  .frame{
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+  }
+  .frame div{
+    height: 11%;
+    width: 98%;
+    border-bottom-style: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  .container{
+    height: 93%;
+  }
+}
+@media screen and (max-width: 510px){
+  .checkbtn{
+    font-size: 20px;
+    color: #9C1A26;
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+    display: block;
+  }
+  #check{
+    display: none;
+  }
+  body{
+    height: 202vh;
+  }
+  .container{
+    margin-top: 60px;
+    height: 100%;
+  }
+  #check:checked~ul{
+    left: 0;
+  }
+}
