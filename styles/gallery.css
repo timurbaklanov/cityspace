@@ -1,236 +1,249 @@
 /*main element css*/
-.container {
-  height: 82%;
-  margin: 12px 0px 6px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-}
-
-.frame{
-  width: 98%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.frame div{
-  flex: 1;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition-duration: 1s;
-  border-color: rgba(44, 44, 44, 0.603);
-  border-style: solid;
-  border-right-style: none;
-}
-
-/*right hand side border in last image*/
-.frame .img-9{
-  border-right-style: solid;
-}
-
-.frame div:hover{
-  flex: 3;
-  transition-duration: 1s;
-}
-
-.frame a{
-  flex: 1;
-  height: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition-duration: 1s;
-}
-
-.frame a:hover{
-  background-color: rgba(44, 44, 44, 0.603);
-  transition-duration: 1s;
-  opacity: 1;
-}
-
-.frame ion-icon{
-  opacity: 0;
-  padding-left: 50px;
-  padding-right: 50px;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  color: rgba(231, 231, 231, 0.4);
-  transition-duration: 1s;
-}
-
-.frame ion-icon:hover{
-  opacity: 1;
-  transition-duration: 1s;
-  padding-left: 120px;
-  padding-right: 120px;
-}
-
-/*all images*/
-.frame .img-1{
-  background: url(../images/gallery/CasaLoma.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.frame .img-2{
-  background: url(../images/gallery/img2.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-position-x: 46%;
-  background-position-y: 35%;
-  background-size: cover;
-}
-
-.frame .img-3{
-  background: url(../images/gallery/City_Hall.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.frame .img-4{
-  background: url(../images/gallery/CN-tower.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.frame .img-5{
-  background: url(../images/gallery/coastal.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.frame .img-6{
-  background: url(../images/gallery/HighPark.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.frame .img-7{
-  background: url(../images/gallery/redHouse.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.frame .img-8{
-  background: url(../images/gallery/royal_museum.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.frame .img-9{
-  background: url(../images/gallery/Center2.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/*responsive*/
-@media screen and (max-width: 1196px) {
-    .frame div:hover{
-    flex: 2;
-    transition-duration: 1s;
-  }
-  .frame ion-icon:hover{
-    opacity: 1;
-    transition-duration: 1s;
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-}
-@media screen and (max-width: 970px){
-  .frame {
-    flex-flow: wrap;
-  }
-  body{
-    height: 200%;
-  }
-  .container{
-    height: 91%;
-  }
-  .frame{
-    height: 100%;
-  }
-  .frame div{
-    height: 33.3%;
-    min-width: 240px;
-    border-bottom-style: none;
-  }
-  .container .frame .img-3,  .container .frame .img-6,  .container .frame .img-9{
-    border-right-style: solid;
-  }
-  .container .frame .img-7,  .container .frame .img-8,  .container .frame .img-9{
-    border-bottom-style: solid;
-  }
-  .frame ion-icon{
-    opacity: 0;
-    padding: 0;
-    height: 100%;
+.wrapper {
+    height: 82%;
     width: 100%;
-  }
-  .frame ion-icon:hover{
-    opacity: 1;
-    transition-duration: 0.5s;
-    padding-left: 30%;
-    padding-right: 30%;
-  }
+    margin: 12px 0px 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
-@media screen and (max-width: 750px) {
-  body{
-    height: 220%;
-  }
-  .container{
-    height: 92%;
-  }
-  .frame{
+  
+.wrapper .frame{
+    width: 95%;
     height: 100%;
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.wrapper .frame .prevButton, .wrapper .frame .nextButton {
+    flex: 0.02;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    display: flex;
+}
+.wrapper .frame .container{
+    flex: 1;
+    border-style: none;
+    overflow: hidden;
+    width: 96%;
+}
+.wrapper .frame .container .track{
     width: 100%;
-    flex-direction: column;
-  }
-  .frame div{
-    height: 11%;
-    width: 98%;
-    border-bottom-style: none;
-  }
-}
-@media screen and (max-width: 650px) {
-  .container{
-    height: 93%;
-  }
-}
-@media screen and (max-width: 510px){
-  .checkbtn{
-    font-size: 20px;
-    color: #9C1A26;
-    float: right;
-    margin-right: 20px;
-    cursor: pointer;
-    display: block;
-  }
-  #check{
-    display: none;
-  }
-  body{
-    height: 202vh;
-  }
-  .container{
-    margin-top: 60px;
     height: 100%;
+    display: flex;
+}
+  
+.frame .container .track div{
+    box-sizing: border-box;
+    flex: 1;
+    height: 100%;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    border-left-style: none;
+    display: flex;
+} 
+.frame .container .track div:last-child{
+    border-right-style: none;
+}
+.frame .container .track a{
+    flex: 1;
+    height: 100%;
+    transition-duration: 1s;
+}
+
+.wrapper .frame a:hover{
+    background-color: rgba(44, 44, 44, 0.603);
+    transition-duration: 1s;
+    opacity: 1;
+}
+  
+.frame div:first-child, .frame div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(161, 161, 161, 0.603);
+}
+.frame div:first-child:hover, .frame div:last-child:hover{
+    background-color: rgba(44, 44, 44, 0.603);
+    transition-duration: 1s;
+}
+/*scale images when hover*/
+.frame .container .track div{
+    animation: scaledown .4s linear;
+    animation-fill-mode: forwards;
+}
+.frame .container .track div:hover{
+    transition-duration: 1s;
+    z-index: 100;
+    animation: scale .4s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes scaledown{
+    0%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1.0);
+    }
+}
+@keyframes scale{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.3);
+    }
+} 
+  /*all images*/
+  .frame .img-1{
+    background: url(../images/gallery/CasaLoma.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-  #check:checked~ul{
+  
+  .frame .img-2{
+    background: url(../images/gallery/img2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-x: 46%;
+    background-position-y: 35%;
+    background-size: cover;
+  }
+  
+  .frame .img-3{
+    background: url(../images/gallery/City_Hall.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .frame .img-4{
+    background: url(../images/gallery/CN-tower.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .frame .img-5{
+    background: url(../images/gallery/coastal.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .frame .img-6{
+    background: url(../images/gallery/HighPark.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .frame .img-7{
+    background: url(../images/gallery/redHouse.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .frame .img-8{
+    background: url(../images/gallery/royal_museum.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .frame .img-9{
+    background: url(../images/gallery/Center2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  footer {
+    margin-top: 15px;
+    position: absolute;
+    bottom: 0;
     left: 0;
+    right: 0;
   }
-}
+  
+  /*responsive*/
+  @media screen and (max-width: 1040px){
+    html{
+      height: 250%;
+    }
+    .wrapper{
+      height: 92%;
+    }
+    .frame{
+        height: 100%;
+      }
+    .wrapper .frame .prevButton, .wrapper .frame .nextButton{
+        display: none;
+    }
+    .wrapper .frame .container{
+        overflow: visible;
+        height: 100%;
+    }
+    .wrapper .frame .container .track{
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .wrapper .frame .container .track div{
+        width: 100%;
+        height: 10%;
+        transition-duration: 0.3s;
+    }
+    .frame .container .track div:hover{
+        flex: 2;
+        transition-duration: 1s;
+    }
+    .container .frame .img-3,  .container .frame .img-6,  .container .frame .img-9{
+      border-right-style: solid;
+    }
+    .container .frame .img-7,  .container .frame .img-8,  .container .frame .img-9{
+      border-bottom-style: solid;
+    }
+
+    footer {
+      position: absolute;
+      bottom: -150%;
+      left: 0;
+      right: 0;
+    }
+    @keyframes scaledown{
+        0%{
+            transform: scale(1);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+    @keyframes scale{
+        0%{
+            transform: scale(1);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .wrapper .frame .container .track div{
+        z-index: 0; 
+    } 
+    body{
+      box-sizing: border-box;
+      height: 100%;
+    }
+    main{
+      margin-top: 0 !important;
+      padding-top: 75px !important;
+    }
+  }

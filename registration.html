@@ -4,10 +4,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Registration - CitySpace</title>
-	<meta name="keywords" content="Canada, Toronto, events, news events">
-	<meta name="description" content="Find latest news about events in Canadian cities with us">
+	<meta name="keywords" content="Canada, Toronto, register">
+	<meta name="description" content="Register to access amazing location and places for travelling">
+
+	<!-- styles -->
 	<link rel="stylesheet" href="styles/main.css">
 	<link rel="stylesheet" href="styles/registration.css">
+
+	<!-- extra contents -->
 	<link rel="shortcut icon" href="images/favicon.ico">
 	<link href='https://fonts.googleapis.com/css?family=Titillium Web' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
@@ -21,27 +25,31 @@
 <body>
 	<main class="container">
 		<div class="container_child form">
-			<form action="#">
+			<form action="#" id="registration_form">
 				<div class="form-group">
 					<label for="username">Username</label>
-					<input class="form-control" type="text" name="username" id="username" placeholder="Enter Username" required/>
+					<input class="form-control" type="text" name="username" id="username" placeholder="Enter Username" required onchange="checkUserName()"/>
+					<span class="error"></span>
 				</div>
 				<div class="form-group">
 					<label for="email">Email</label>
-					<input class="form-control" type="text" name="email" id="email" placeholder="Enter Email"required/>
+					<input class="form-control" type="email" name="email" id="email" placeholder="Enter Email"required onchange="checkEmail()"/>
+					<span class="error"></span>
 				</div>
 				<div class="form-group">
 					<label for="password">Password</label>
-					<input class="form-control" type="password" name="password" id="password" placeholder="********" required/>
+					<input class="form-control" type="password" name="password" id="password" placeholder="********" required onchange="checkPassword()"/>
+					<span class="error"></span>
 				</div>
 				<div class="form-group">
-					<label for="passwordRepeat">Repeat Password</label>
-					<input class="form-control" type="password" name="passwordRepeat" id="passwordRepeat" placeholder="********" required/>
+					<label for="passwordConfirm">Confirm Password</label>
+					<input class="form-control" type="password" name="passwordConfirm" id="passwordConfirm" placeholder="********" required onchange="checkConfirmPassword()"/>
+					<span class="error"></span>
 				</div>
 				<div class="m-t-lg">
 					<ul class="list-inline">
 						<li>
-							<input class="btn btn-form" type="submit" value="Register"/>
+							<input class="btn btn-form" type="submit" value="Register" onClick=""/>
 						</li>
 						<li>
 							<a class="signup_link" href="login.html">I am already a member</a>
@@ -61,5 +69,12 @@
 			<div class="overlay"></div>
 		</section>
 	</main>
+
+	<!-- json files -->
+	<script src="assets/users.json"></script>
+	<!-- js files -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.md5.js"></script>
+	<script src="js/registration.js"></script>
 </body>
 </html>

@@ -4,10 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - CitySpace</title>
-  <meta name="keywords" content="Canada, Toronto, events, news events">
-  <meta name="description" content="Find latest news about events in Canadian cities with us">
+  <meta name="keywords" content="Canada, Toronto, about, information">
+  <meta name="description" content="Helping people to find the place they want to visit in Canada">
+
+  <!-- styles -->
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/about.css">
+
+  <!-- extra contents -->
   <link rel="shortcut icon" href="images/favicon.ico">
   <link href='https://fonts.googleapis.com/css?family=Titillium Web' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
@@ -22,34 +26,38 @@
   <header>
     <!-- website logo -->
     <figure id="logo">
-        <a href="news.html"><img src="images/logo.png" alt="logo" width="150px" height="auto"></a>
+      <a href="news.html"><img src="images/logo.png" alt="logo" width="150px" height="auto"></a>
     </figure>
 
     <!-- navigation bar -->
     <nav class="topnav">
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
-        <ul>
-            <li><a href="news.html"><div class="navEven"><p>News</p></div></a></li>
-            <!-- nested menu -->
-            <li class="nestedMenu"><a href="#"><div><p>Content</p></div></a>
-                <ul>
-                    <li><a href="gallery.html"><div class="navOdd"><p>Gallery</p></div></a></li>
-                    <li><a href="landmarks.html"><div class="navEven"><p>Landmarks</p></div></a></li>
-                    <li><a href="events.html"><div class="navOdd"><p>Events</p></div></a></li>
-                    <li><a href="placestogo.html"><div class="navEven"><p>Places to go</p></div></a></li>
-                </ul>
-            </li>
-            <li><a href="contact.html"><div class="navOdd"><p>Contact</p></div></a></li>         <!-- active link -->
-            <li><a href="about.html"><div class="navOdd active"><p>About</p></div></a></li>
-        </ul>
-
-        <ul class="login">
-            <li><a href="login.html"><div class="navOdd"><p>Login</p></div></a></li>
-            <li><a href="registration.html"><div class="navOdd"><p>Registration</p></div></a></li>
-        </ul> 
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
+      <ul>
+        <li><a href="#"><div class="navOdd user_info"></div></a></li>
+        <li><a href="news.html"><div class="navEven"><p>News</p></div></a></li>
+        <!-- nested menu -->
+        <li class="nestedMenu"><a href="#"><div><p>Content</p></div></a>
+          <ul>
+            <li><a href="gallery.html"><div class="navOdd"><p>Gallery</p></div></a></li>
+            <li><a href="landmarks.html"><div class="navEven"><p>Landmarks</p></div></a></li>
+            <li><a href="events.html"><div class="navOdd"><p>Events</p></div></a></li>
+            <li><a href="placestogo.html"><div class="navEven"><p>Places</p></div></a></li>
+          </ul>
+        </li>
+        <!--Nested menu will be displayed in mobile version-->
+        <li class="mobile_version"><a href="gallery.html"><div class="navOdd nested"><p>Gallery</p></div></a></li>   
+        <li class="mobile_version"><a href="landmarks.html"><div class="navEven nested"><p>Landmarks</p></div></a></li>
+        <li class="mobile_version"><a href="events.html"><div class="navOdd nested"><p>Events</p></div></a></li>
+        <li class="mobile_version"><a href="placestogo.html"><div class="navEven nested"><p>Places</p></div></a></li>
+        <!--End of nested menu-->
+        <li><a href="contact.html"><div class="navOdd"><p>Contact</p></div></a></li>         
+        <li><a href="about.html"><div class="navOdd active"><p>About</p></div></a></li> <!-- active link -->
+        <li><a href="#" onclick="logout()"><div class="navOdd"><p>Logout</p></div></a></li>
+      </ul>
     </nav>
-</header>
+  </header>
+  
   <main>
     <!-- information about the website -->
     <div class="about-section">
@@ -69,7 +77,9 @@
             <p class="title">CEO & Founder</p>
             <p>Pruthvi has been CEO of CitySpace since 2012.</p>
             <p>pruhvi@cityspace.com</p>
-            <p><button class="button">Contact</button></p>
+            <form action="cityspace.com">
+              <p><button class="button">Contact</button></p>
+            </form>
           </div>
         </div>
       </div>
@@ -82,7 +92,9 @@
             <p class="title">Art Director</p>
             <p>Leontii has been Art Director since 2015</p>
             <p>leontii@cityspaces.com</p>
-            <p><button class="button">Contact</button></p>
+            <form action="cityspace.com">
+              <p><button class="button">Contact</button></p>
+            </form>
           </div>
         </div>
       </div>
@@ -95,35 +107,54 @@
             <p class="title">Designer</p>
             <p>Tim has been the designer of CitySpace since 2018</p>
             <p>tim@cityspace.com</p>
-            <p><button class="button">Contact</button></p>
+            <form action="cityspace.com">
+              <p><button class="button">Contact</button></p>
+            </form>
           </div>
         </div>
       </div>
     </div>
-    <div class="faq">
+
+    <div class = "second-section">
+      <!--FAQ section-->
+    <div class="faq" id="faq">
+      <!--Search section-->
+
       <h2 style="text-align:center">Frequently Asked Questions</h2>
       <p class="faq-text">Whether you need assistance honing your resume or want to know what to expect during the interview process, we can help. Read through the following answers on popular topics to set yourself up for success.</p>
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a question..">
+
+
+      <button class="accordion">How should I submit my resume?</button>
+      <div class="panel">
+        <p>When you create your profile on the CitySpace Careers site you’ll be asked to share your career history by uploading an existing resume or importing your information from LinkedIn.</p>
+      </div>
+      <button class="accordion">I've submitted my resume and now what?</button>
+      <div class="panel">
+        <p>Our recruiters review job applicants for each opening and reach out to those who appear to be a strong match with the position.
+          But even if you're not contacted for the job you applied for, your information will go into our recruiter's shared candidate database, which means you may be contacted for other opportunities within CitySpace at a later date.</p>
+      </div>
+      <button class="accordion">How can I prepare for the interview?</button>
+      <div class="panel">
+      <p>Help us get to know you by explaining how your prior experience and successes have prepared you for the role you’re pursuing at CitySpace. Review the job description and do a bit of research on the product, team, and our company. Come with a few examples in mind that demonstrate your strengths, any questions you have about the opportunity, and a healthy dose of curiosity. It’s always a good idea to get plenty of sleep and eat a good breakfast, too.</p>
+      </div>
+
       <button class="accordion">What's the best way to apply for a job?</button>
       <div class="panel">
         <p>Search and apply for a job on our Careers website. Once you’ve created a profile you’ll be able to quickly apply for additional openings, set-up job alerts, and view the status of your application(s).</p>
       </div>
       <button class="accordion">Can I apply for more than one job?</button>
       <div class="panel">
-        <p>Yes, you can <p>
+        <p>Yes, you can</p>
       </div>
       <button class="accordion">How soon decision will made?</button>
       <div class="panel">
         <p>Your recruiter can help you understand the specific timeline for the opening you've applied for. You should hear back from them with a status update within a week of your interview.</p>
       </div>
-      <button class="accordion">How should I submit my resume?</button>
-      <div class="panel">
-        <p>When you create your profile on the CitySpace Careers site you’ll be asked to share your career history by uploading an existing resume or importing your information from LinkedIn.</p>
-      </div>
+    </div>
     </div>
   </main>
-  <script src="js/jquery.slicknav.js"></script>
-  <script src="js/about.js"></script>
-  
+
   <footer>
     <div class="container-fluid"> 
       <a class="website_name" href="#">CITY SPACE</a> 
@@ -133,5 +164,10 @@
       <span style="display: none">v0.0.1</span>
     </div>
   </footer>
+
+  <!-- js files -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/about.js"></script>
 </body>
 </html>

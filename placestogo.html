@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Places to Go - CitySpace</title>
-	<meta name="keywords" content="Canada, Toronto, events, news events">
-	<meta name="description" content="Find latest news about events in Canadian cities with us">
+	<meta name="keywords" content="Canada, Toronto, places">
+	<meta name="description" content="Find different places you can visit in different cities">
+
+    <!-- styles -->
 	<link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/placestogo.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+				
+
+
+    <!-- extra contents -->
     <link rel="shortcut icon" href="images/favicon.ico">
     <link href='https://fonts.googleapis.com/css?family=Titillium Web' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
@@ -15,6 +23,7 @@
 
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
     <header>
@@ -28,23 +37,26 @@
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
             <ul>
+                <li><a href="#"><div class="navOdd user_info"></div></a></li>
                 <li><a href="news.html"><div class="navEven"><p>News</p></div></a></li>     <!-- active link -->
                 <!-- nested menu -->
-                <li class="nestedMenu"><a href="#"><div><p>Content</p></div></a>
+                <li class="nestedMenu"><a href="#"><div class="active"><p>Content</p></div></a>
                     <ul>
                         <li><a href="gallery.html"><div class="navOdd"><p>Gallery</p></div></a></li>
                         <li><a href="landmarks.html"><div class="navEven"><p>Landmarks</p></div></a></li>
                         <li><a href="events.html"><div class="navOdd"><p>Events</p></div></a></li>
-                        <li><a href="placestogo.html"><div class="navEven active"><p>Places to go</p></div></a></li>  <!-- active link -->
+                        <li><a href="placestogo.html"><div class="navEven active"><p>Places</p></div></a></li>  <!-- active link -->
                     </ul>
                 </li>
+                <!--Nested menu will be displayed in mobile version-->
+                <li class="mobile_version"><a href="gallery.html"><div class="navOdd nested"><p>Gallery</p></div></a></li>   
+                <li class="mobile_version"><a href="landmarks.html"><div class="navEven nested"><p>Landmarks</p></div></a></li>
+                <li class="mobile_version"><a href="events.html"><div class="navOdd nested"><p>Events</p></div></a></li>
+                <li class="mobile_version"><a href="placestogo.html"><div class="navEven active nested"><p>Places</p></div></a></li>
+                <!--End of nested menu-->
                 <li><a href="contact.html"><div class="navOdd"><p>Contact</p></div></a></li>
                 <li><a href="about.html"><div class="navOdd"><p>About</p></div></a></li>
-            </ul> 
-
-            <ul class="login">
-                <li><a href="login.html"><div class="navOdd"><p>Login</p></div></a></li>
-                <li><a href="registration.html"><div class="navOdd"><p>Registration</p></div></a></li>
+                <li><a href="#" onclick="logout()"><div class="navOdd"><p>Logout</p></div></a></li>
             </ul> 
         </nav>
     </header>
@@ -56,24 +68,16 @@
             <h1 class="centered">Looking for new places? <br> <span class="name">SpaceCity</span> got you.</h1>
         </section>
         <div class="container">
-            <!--Needs JavaScript here-->
-            <section>
-                <h2 class="title">Know what you’re looking for already?</h2>
-                <form action="/action_page.php" class="search">
-                    <input type="text" placeholder="Search place by name.." name="search" id="search">
-                    <button type="submit" id="btn">Submit</button>
-                  </form>
-            </section>
             <!--Places section-->
-            <section class="flex section">
+            <section class="flex section" id="mySection">
                 <div class="view-all">
                     <h2 class="title">Restaraunt</h2>
-                    <a href="#">View all</a>
                 </div>
                 <hr class="solid">
-                <div class="restaraunt grid">
+                <!--Restaunt grid-->
+                <div class="restaraunt grid responsive">
                     <div class="grid-item">
-                        <img src="images/placestogo/1.jpg" alt="Figures" class="photo-section">
+                        <img src="images/placestogo/1.jpg" alt="Byblos" class="photo-section">
                         <div class="text-description">
                             <h4>Byblos</h4>
                             <p>Toronto, Ontario</p>
@@ -81,17 +85,33 @@
                         </div>
                     </div>
                     <div class="grid-item">
-                        <img src="images/placestogo/2.jpg" alt="Dumpling House" class="photo-section">
+                        <img src="images/placestogo/10.jpg" alt="Grey Gardens" class="photo-section">
                         <div class="text-description">
-                            <h4>Byblos</h4>
+                            <h4>Grey Gardens</h4>
+                            <p>Etobicoke, Ontario</p>
+                            <p>Raiting: 2 stars</p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/placestogo/11.jpg" alt="Pukka" class="photo-section">
+                        <div class="text-description">
+                            <h4>Pukka</h4>
+                            <p>Toronto, Ontario</p>
+                            <p>Raiting: 5 stars</p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/placestogo/2.jpg" alt="Alo" class="photo-section">
+                        <div class="text-description">
+                            <h4>Alo Restaraunt</h4>
                             <p>Toronto, Ontario</p>
                             <p>Raiting: 3 stars</p>
                         </div>
                     </div>
                     <div class="grid-item">
-                        <img src="images/placestogo/3.jpg" alt="Byblos" class="photo-section">
+                        <img src="images/placestogo/3.jpg" alt="Dailo" class="photo-section">
                         <div class="text-description">
-                            <h4>Byblos</h4>
+                            <h4>Dailo</h4>
                             <p>Toronto, Ontario</p>
                             <p>Raiting: 4 stars</p>
                         </div>
@@ -99,61 +119,104 @@
                 </div>
                 <div class="view-all">
                     <h2 class="title">Museum</h2>
-                    <a href="#">View all</a>
                 </div>
                 <hr class="solid">
-                <div class="museum grid">
+                <!--Museum grid-->
+                <div class="museum grid responsive">
                     <div class="grid-item">
-                        <img src="images/placestogo/4.jpg" alt="Casa Loma" class="photo-section">
+                        <img src="images/placestogo/4.jpg" alt="Royal" class="photo-section">
                         <div class="text-description">
                             <h4>Royal Ontario Museum</h4>
                             <p>Toronto, Ontario</p>
-                            <p>Raiting: 3 stars</p>
                         </div>
                     </div>
                     <div class="grid-item">
-                        <img src="images/placestogo/5.jpg" alt="Casa Loma" class="photo-section">
+                        <img src="images/placestogo/12.jpg" alt="Culture" class="photo-section">
+                        <div class="text-description">
+                            <h4>Museum of Pop Culture</h4>
+                            <p>Etobicoke, Ontario</p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/placestogo/13.jpg" alt="Salem" class="photo-section">
+                        <div class="text-description">
+                            <h4>Salem Witch Museum</h4>
+                            <p>York, Ontario</p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/placestogo/5.jpg" alt="Art Gallery of Ontario" class="photo-section">
                         <div class="text-description">
                             <h4>Art Gallery of Ontario</h4>
                             <p>Toronto, Ontario</p>
-                            <p>Raiting: 4 stars</p>
                         </div>
                     </div>
                     <div class="grid-item">
-                        <img src="images/placestogo/6.jpg" alt="Casa Loma" class="photo-section">
+                        <img src="images/placestogo/6.jpg" alt="ata Shoe Museum" class="photo-section">
                         <div class="text-description">
                             <h4>Bata Shoe Museum</h4>
                             <p>Toronto, Ontario</p>
-                            <p>Raiting: 4 stars</p>
                         </div>
                     </div>
                 </div>
                 <div class="view-all">
-                    <h2 class="title">Cinemas</h2>
-                    <a href="#">View all</a>
+                    <h2 class="title">Cafe</h2>
                 </div>
                 <hr class="solid">
-                <div class="museum grid">
+                <!--Cafe-->
+                <div class="museum grid responsive">
                     <div class="grid-item">
-                        <img src="images/placestogo/7.jpg" alt="Early Bird Coffee & Kitchen" class="photo-section">
+                        <img src="images/placestogo/14.jpg" alt="Luckly" class="photo-section">
                         <div class="text-description">
-                            <h4>Early Bird Coffee & Kitchen</h4>
+                            <h4>High Luckly</h4>
                             <p>Toronto, Ontario</p>
                             <p>Raiting: 4 stars</p>
                         </div>
                     </div>
                     <div class="grid-item">
-                        <img src="images/placestogo/8.jpg" alt="Tandem Coffee" class="photo-section">
+                        <img src="images/placestogo/15.jpg" alt="All Time" class="photo-section">
                         <div class="text-description">
-                            <h4>Tandem Coffee</h4>
+                            <h4>All Time</h4>
+                            <p>Toronto, Ontario</p>
+                            <p>Raiting: 4 stars</p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/placestogo/16.jpg" alt="Sabrina's Cafe" class="photo-section">
+                        <div class="text-description">
+                            <h4>Sabrina's Cafe</h4>
+                            <p>Toronto, Ontario</p>
+                            <p>Raiting: 4 stars</p>
+                        </div>
+                    </div> 
+                    <div class="grid-item">
+                        <img src="images/placestogo/17.jpg" alt="K'Far Cafe" class="photo-section">
+                        <div class="text-description">
+                            <h4>K'Far Cafe</h4>
                             <p>Toronto, Ontario</p>
                             <p>Raiting: 3 stars</p>
                         </div>
                     </div>
                     <div class="grid-item">
-                        <img src="images/placestogo/9.jpg" alt="Rooster Coffee House - Broadview" class="photo-section">
+                        <img src="images/placestogo/18.jpg" alt="Tasha's" class="photo-section">
                         <div class="text-description">
-                            <h4>Rooster Coffee House - Broadview</h4>
+                            <h4>Tasha's</h4>
+                            <p>Toronto, Ontario</p>
+                            <p>Raiting: 5 stars</p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/placestogo/19.jpg" alt="Joud" class="photo-section">
+                        <div class="text-description">
+                            <h4>Joud</h4>
+                            <p>Toronto, Ontario</p>
+                            <p>Raiting: 5 stars</p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/placestogo/20.jpg" alt="Local" class="photo-section">
+                        <div class="text-description">
+                            <h4>Local</h4>
                             <p>Toronto, Ontario</p>
                             <p>Raiting: 5 stars</p>
                         </div>
@@ -170,7 +233,7 @@
                 <!--Title-->
                 <h2 class="title-section email-title"> Do you need more? <br>
                     Feel free to ask us. We‘ll make list for you</h2>
-                <img src="/images/placestogo/dan-gold-E6HjQaB7UEA-unsplash.jpg" alt="" class="email-photo">
+                <img src="../images/placestogo/dan-gold-E6HjQaB7UEA-unsplash.jpg" alt="" class="email-photo">
 
                 <form id="account-information" action="" method="GET">
                     <!--Account Information Section-->
@@ -200,5 +263,13 @@
             <span style="display: none">v0.0.1</span>
         </div>
     </footer>
+
+    <!-- js files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/places.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>    
+    <script type="text/javascript" src="slick/slick.min.js"></script>
 </body>
 </html>

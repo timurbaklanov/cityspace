@@ -5,9 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Login - CitySpace</title>
 	<meta name="keywords" content="Canada, Toronto, events, news events">
-	<meta name="description" content="Find latest news about events in Canadian cities with us">
+	<meta name="description" content="Login to access some amazing content">
+
+	<!-- styles -->
 	<link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/login.css">
+
+    <!-- extra contents -->
     <link rel="shortcut icon" href="images/favicon.ico">
     <link href='https://fonts.googleapis.com/css?family=Titillium Web' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
@@ -31,7 +35,7 @@
 			<div class="overlay"></div>
 		</section>
 		<div class="container_child form">
-			<form action="#">
+			<form action="#" id="login_form">
 				<div class="form-group">
 					<label for="username">Username</label>
 					<input class="form-control" type="text" name="username" id="username" placeholder="Enter Username" required/>
@@ -40,6 +44,7 @@
 					<label for="password">Password</label>
 					<input class="form-control" type="password" name="password" id="password" placeholder="********" required/>
 				</div>
+				<span class="error" id="display_error"></span>
 				<div class="m-t-lg">
 					<ul class="list-inline">
 						<li>
@@ -53,5 +58,13 @@
 			</form>
 		</div>
 	</main>
+
+	<!-- json files -->
+	<script src="assets/users.json"></script>
+
+	<!-- js files -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.md5.js"></script>
+	<script src="js/login.js"></script>
 </body>
 </html>

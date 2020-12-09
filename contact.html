@@ -14,6 +14,9 @@
     <link href='https://fonts.googleapis.com/css?family=Titillium Web' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!--Import font for button-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
@@ -32,6 +35,7 @@
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
             <ul>
+                <li><a href="#"><div class="navOdd user_info"></div></a></li>
                 <li><a href="news.html"><div class="navEven"><p>News</p></div></a></li>
                 <!-- nested menu -->
                 <li class="nestedMenu"><a href="#"><div><p>Content</p></div></a>
@@ -39,17 +43,19 @@
                         <li><a href="gallery.html"><div class="navOdd"><p>Gallery</p></div></a></li>
                         <li><a href="landmarks.html"><div class="navEven"><p>Landmarks</p></div></a></li>
                         <li><a href="events.html"><div class="navOdd"><p>Events</p></div></a></li>
-                        <li><a href="placestogo.html"><div class="navEven"><p>Places to go</p></div></a></li>
+                        <li><a href="placestogo.html"><div class="navEven"><p>Places</p></div></a></li>
                     </ul>
                 </li>
+                <!--Nested menu will be displayed in mobile version-->
+                <li class="mobile_version"><a href="gallery.html"><div class="navOdd nested"><p>Gallery</p></div></a></li>   
+                <li class="mobile_version"><a href="landmarks.html"><div class="navEven nested"><p>Landmarks</p></div></a></li>
+                <li class="mobile_version"><a href="events.html"><div class="navOdd nested"><p>Events</p></div></a></li>
+                <li class="mobile_version"><a href="placestogo.html"><div class="navEven nested"><p>Places</p></div></a></li>
+                <!--End of nested menu-->
                 <li><a href="contact.html"><div class="navOdd active"><p>Contact</p></div></a></li>         <!-- active link -->
                 <li><a href="about.html"><div class="navOdd"><p>About</p></div></a></li>
+                <li><a href="#" onclick="logout()"><div class="navOdd"><p>Logout</p></div></a></li>
             </ul>
-
-            <ul class="login">
-                <li><a href="login.html"><div class="navOdd"><p>Login</p></div></a></li>
-                <li><a href="registration.html"><div class="navOdd"><p>Registration</p></div></a></li>
-            </ul> 
         </nav>
     </header>
 
@@ -69,6 +75,41 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.283557784239!2d-79.45429568450957!3d43.725435955774664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b32340d1980a1%3A0x9948d80f620f1eb9!2sYorkdale%20Shopping%20Centre!5e0!3m2!1sen!2sua!4v1605518995967!5m2!1sen!2sua" 
         width="90%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </main>
+    <div class="btnContainer">
+        <button class="contactBtn" onclick="openForm()">Contact Us</button>
+    </div>
+    <!--Contact Form-->
+    <div class="formArea">
+        <div class="closeBtn">
+            <button value="" onclick="closeForm()">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+        <div class="formFrame">
+            <h2>Contact Us</h2>
+            <div id="errMessage"></div>
+            <form id="contactForm" onsubmit="return validation()">
+                <div class="inputField">
+                    <input type="text" placeholder="First Name" id="fName">
+                </div>
+                <div class="inputField">
+                    <input type="text" placeholder="Last Name" id="lName">
+                </div>
+                <div class="inputField">
+                    <input type="text" placeholder="Phone Number" id="phoneNumber">
+                </div>
+                <div class="inputField">
+                    <input type="text" placeholder="Email" id="emailAddress">
+                </div>
+                <div class="inputField">
+                    <textarea id="message" placeholder="Message"></textarea>
+                </div>
+                <div class="submitBtn">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
 
     <footer>
         <div class="container-fluid"> 
@@ -79,5 +120,10 @@
             <span style="display: none">v0.0.1</span>
         </div>
     </footer>
+
+    <!-- js files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>

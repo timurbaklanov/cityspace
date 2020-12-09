@@ -1,0 +1,19 @@
+let jsonObj = {
+	"users": [
+		{
+			"username": "cornel",
+			"email": "cornel@gmail.com",
+			"password": "527eef2bf0cee62e3caf14eaa07d4789"
+		},
+		{
+			"username": "jack",
+			"email": "jack@gmail.com",
+			"password": "90fcb0c1b4a7a23406eade69d02c6ea5"
+		},
+		{
+			"username": "admin",
+			"email": "admin@gmail.com",
+			"password": "6627565c13e210d40d2ab04ab9612879"
+		}
+	]
+}

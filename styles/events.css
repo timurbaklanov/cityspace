@@ -1,3 +1,9 @@
+/* main style */
+body{
+    box-sizing: border-box;
+    height: 100%;
+    transition: ease-out 0.5s;
+}
 main {
     display: flex;
     justify-content: center;
@@ -6,7 +12,9 @@ main {
     background-color: rgb(238, 238, 238);
     font-family: 'Oxygen', sans-serif;
     z-index: -1;
+    transition: ease-out 0.5s;
 }
+
 .frame{
     width: 95%;
     height: 98%;
@@ -24,6 +32,16 @@ main {
     border-color: white;
     text-align: center;
     letter-spacing: 1px;
+}
+.frame div a{
+    background-color: rgba(44, 44, 44, 0);
+    transition: ease-out 0.5s;
+    width: 100%;
+    height: 100%;
+}
+.frame div a:hover{
+    background-color: rgba(44, 44, 44, 0.603);
+    /* transition: ease-out 0.5s; */
 }
 h1{
     grid-area: 1 / 1 / 7 / 30;
@@ -101,6 +119,134 @@ footer{
     left: 0;
     right: 0;
 }
+
+/*Style for page's themes*/
+.frame input[type="checkbox"]{
+    visibility: hidden;
+    display: none;
+}
+.frame .check{
+    display: block;
+    width: 40px;
+    height: 20px;
+    background-color: #303030;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all ease 0.5s;
+    position: absolute;
+    top: 100px;
+    right: 40px;
+}
+.frame input[type="checkbox"]:checked ~ .check{
+    background-color: rgb(238, 238, 238);
+}
+.check::before{
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background-color: black;
+    box-shadow: inset 0 0 2px 1px white;
+    width: 16px;
+    height: 16px;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+.frame input[type="checkbox"]:checked ~ .check::before{
+    transform: translateX(20px);
+    background-color: white;
+    box-shadow: inset 0 0 2px 1px black;
+}
+
+.dark .nestedMenu > ul,
+.dark .topnav ul div{
+    background-color: #282828;
+}
+.dark header{
+    background-color: #282828;
+}
+.dark header .topnav ul li a p, .dark main .frame h1,
+.dark header .topnav ul .nested{
+    color: white;
+}
+.dark header .topnav ul li a .active p{
+    color: red;
+}
+.dark .topnav ul div:hover{
+    background-color: #303030;
+}
+
+.dark main, .dark{
+    background-color: #3f3f3f;
+    transition: ease-out 0.5s;
+}
+
+/* Style cards with descriptions */
+
+/* element that contains both image and description */
+.frame div .card_inner{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+/* image */
+.frame div .card_inner .card_face--front{
+    width: 100%;
+    height: 100%;
+}
+
+.frame div .card_inner .card_face--front a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+/* description */
+.frame div .card_inner .card_face--back{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: -100%;
+    text-align: center;
+    transform: translateZ(20px) scaleY(0);
+    transform-origin: bottom;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    border: none;
+}
+.frame div .card_inner .card_face--back a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.frame div .card_inner .card_face--back a p{
+    font-size: 0.8em;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    margin-top: 12%;
+}
+
+/*Adjust description*/
+.frame .img-1 .card_inner .card_face--back a p,
+.frame .img-2 .card_inner .card_face--back a p,
+.frame .img-3 .card_inner .card_face--back a p,
+.frame .img-4 .card_inner .card_face--back a p,
+.frame .img-5 .card_inner .card_face--back a ,
+.frame .img-8 .card_inner .card_face--back a p{
+    font-size: 1.1em;
+}
+/*display description when hover*/
+.frame div .card_inner:hover .card_face--back{
+    transform: translateZ(20px) scaleY(1);
+}
+
+/*Responsive*/
 @media screen and (max-height: 820px) {
     footer {
         height: 6%;
@@ -110,12 +256,13 @@ footer{
         height: 95%;
     }
 }
+@media screen and (max-width: 1196px) {
+    .frame .check{
+        top: 85px;
+    }
+}
 @media screen and (max-width: 970px) {
     main{
-        position: absolute;
-        top: 50px;
-        left: 0;
-        right: 0;
         font-size: 0.8em;
         height: 86.3%;
     }
@@ -139,12 +286,27 @@ footer{
         grid-area: 6 / 30 / 51 / 40;
     }
 }
+@media screen and (max-width: 900px) {
+    main{
+        padding-top: 50px;
+    }
+    html{
+        height: 125vh;
+    }
+    footer{
+        bottom: -25%;
+    }
+}
+
 @media screen and (max-width: 750px) {
     main{
         font-size: 0.65em;
     }
     h1{
         grid-area: 1 / 1 / 4 / 35;
+    }
+    .frame .check{
+        top: 65px;
     }
     .img-1{
         grid-area: 4 / 1 / 20 / 20;
@@ -171,6 +333,13 @@ footer{
         grid-area: 4 / 35 / 35 / 51;
     }
 }
+
+@media screen and (max-width: 680px) {
+    .frame div .card_inner:hover .card_face--back{
+        transform: translateZ(20px) scaleY(0);
+    }
+}
+
 @media screen and (max-width: 480px) {
     .img-1{
         grid-area: 4 / 1 / 15 / 25;
@@ -201,6 +370,9 @@ footer{
     h1{
         grid-area: 1 / 1 / 4 / 51;
         font-size: 1.6em;
+    }
+    .frame .check{
+        right: 5px;
     }
     .img-1{
         grid-area: 4 / 1 / 10 / 51;

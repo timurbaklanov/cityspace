@@ -16,3 +16,23 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  div = document.getElementById("faq");
+  button = div.getElementsByTagName('button');
+  console.log(button);
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < button.length; i++) {
+    txtValue = button[i].innerHTML || button[i].innerText;
+    console.log(button[i])
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      button[i].style.display = "";
+    } else {
+      button[i].style.display = "none";
+    }
+  }
+}
