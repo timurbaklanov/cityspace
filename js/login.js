@@ -8,7 +8,6 @@ let users;
 if(sessionStorage.getItem("users") !== null)
 {
 	users = JSON.parse(atob(sessionStorage.getItem("users")));
-	console.log(users);
 }
 else
 {
