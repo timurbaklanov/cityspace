@@ -32,3 +32,24 @@ $(document).ready(function(){
         ]
       });
   });
+
+  function validateForms() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let error = document.getElementById("error");
+
+    
+    if (name == "") {
+        error.innerText = "Please input valid name";
+        error.style.color = "red";
+        return false;
+    }
+
+    if (!email.includes("@")) {
+        error.innerText = "Please input valid email";
+        error.style.color = "red";
+        return false;
+    }
+}
+
+

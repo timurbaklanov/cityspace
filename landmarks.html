@@ -100,16 +100,17 @@
             <div class="overlay"></div>
             <div class="popup text-center">
             <div class="close-btn">&times;</div>
-	            <form id="account-information" action="" method="GET">
+	            <form id="account-information" onsubmit="return validateForms()" method="POST">
                     <!--Account Information Section-->
                     <fieldset class="account-information">
                         <legend>Let's book a tour: </legend>
                         <div class="account-information">
+                            <p id="error"></p>
                             <label for="name">Name:</label>
-                            <input type="name" name="name" id="name" class="form-control" required>
+                            <input type="name" name="name" id="name" class="form-control">
                             <div class="account-information">
                                 <label for="email">E-Mail:</label>
-                                <input type="email" name="email" id="email" class="form-control" required>
+                                <input type="email" name="email" id="email" class="form-control">
                             </div>
                         </div>
                         <div class="comments">
@@ -117,7 +118,7 @@
                             <textarea name="comments" id="comments"></textarea>
                         </div>
                     </fieldset>
-                    <button type="submit" class="btn">Submit</button>
+                    <button type="submit" class="btn" onclick="">Submit</button>
                 </form>
             </div>
             

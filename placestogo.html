@@ -235,14 +235,15 @@
                     Feel free to ask us. We‘ll make list for you</h2>
                 <img src="../images/placestogo/dan-gold-E6HjQaB7UEA-unsplash.jpg" alt="" class="email-photo">
 
-                <form id="account-information" action="" method="GET">
+                <form id="account-information" onsubmit="return validateForms()" method="POST">
                     <!--Account Information Section-->
                             <div class="account-information">
+                                <p id="error"></p>
                                 <label for="name">Name:</label>
-                                <input type="name" name="name" id="name" required>
+                                <input type="name" name="name" id="name">
                                 <div class="account-information">
                                     <label for="email">E-Mail:</label>
-                                    <input type="email" name="email" id="email" required>
+                                    <input type="email" name="email" id="email">
                                 </div>
                             </div>
                             <div class="comments">
